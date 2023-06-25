@@ -1,119 +1,77 @@
 /* Color del fondo de la pagina */
+/* Color del fondo de la pagina */
 .fondo {
-    height: 1000px;
     color: white;
     background-color: rgb(0, 0, 0);
-
+    display: grid;
     grid-template-areas:
-        "titulo"
-        "nav main"
-        "nav main"
-
-    ;
-}
-.links{
+      "titulo"
+      "nav"
+      "main";
+  }
+  
+  .links {
     display: flex;
     flex-direction: row;
-
-}
-
-/* Titulo */
-.titulo-principal {
+  }
+  
+  .titulo-principal {
     color: white;
     background-color: rgb(24, 2, 218);
     height: 13vh;
     border: 5px black double;
-
     grid-area: titulo;
-}
-
-main {
-    grid-template-areas:
-        "images"
-        "articulo"
-    ;
-    grid-area: main;
-}
-
-nav {
-
-background-color: blue;
+  }
+  
+  main {}
+  
+  nav {
+    background-color: blue;
     grid-area: nav;
-}
-
-
-/* Imagenes de los profesionales */
-.imagenes {
-
-    background-color: rgb(0, 0, 0);
-   
-   background-size: contain;
-   height: 10px;
-   width: 20px;
-
+  }
+  
+  .imagenes {
     display: flex;
-    flex-direction: row ;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    
-
-    
-
-    grid-area: images;
-}
-
-/* imagen de Fernando Belasteguin */
-
-img {
+    justify-content: space-evenly;
+  }
+  
+  .imagen {
+    width: 300px;
+    height: 250px;
+  }
+  
+  .container {
     display: flex;
-    width: 250px;
-    height: 160px;
-
-}
-
-
-/* Textos sobre los Profesionales */
-.articulo {
-    display: flex;
-
-    justify-content: space-around;
-    height: 400px;
-
-    text-align: center;
-
-    grid-area: articulo;
-
-}
-
-.pf-1 {
+    justify-content: space-evenly;
+    gap: 195px;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .texto {
     background-color: rgb(24, 2, 218);
     width: 300px;
-    height: 100px;
-
-}
-
-.pf-2 {
-
-    width: 300px;
-    height: 100px;
-    background-color: rgb(24, 2, 218);
-
-}
-
-.pf-3 {
-    width: 300;
-    height: 100px;
-    background-color: rgb(24, 2, 218);
-
-
-}
-
-footer {
+    height: 150px;
+  }
+  
+  footer {
     width: 1920px;
     height: 8vh;
     background-color: black;
     color: antiquewhite;
-
     grid-area: footer;
-}
+  }
+  
+  /* Estilos responsive */
+  @media screen and (max-width: 768px) {
+    /* Estilos para la imagen */
+    .foto {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    /* Estilos para las secciones */
+    section {
+      margin: 0.5em 0;
+      padding: 0.5em;
+    }
+  }
